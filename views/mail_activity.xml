@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <act_window id="calls_action" name="Calls" context="{'search_default_activity_type_id': [ref('mail.mail_activity_data_call')]}" res_model="mail.activity" view_mode="list,form" />
+
+    <menuitem id="calls_menu" name="Calls" action="calls_action" parent="contacts.menu_contacts"/>
+</odoo>
