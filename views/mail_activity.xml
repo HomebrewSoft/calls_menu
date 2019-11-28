@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <act_window id="notes_action" name="Notes" res_model="mail.message" view_mode="tree" domain="[('message_type', '=', 'comment')]"/>
+
     <record id="view_mail_message_notes_search" model="ir.ui.view">
         <field name="name">view.mail.messages.search</field>
         <field name="model">mail.message</field>
@@ -41,7 +43,6 @@
         </field>
     </record>
 
-    <act_window id="notes_action" name="Notes" res_model="mail.message" view_mode="tree" domain="[('message_type', '=', 'comment')]"/>
 
     <menuitem id="notes_menu" name="Notes" action="notes_action" parent="contacts.menu_contacts"/>
 </odoo>
