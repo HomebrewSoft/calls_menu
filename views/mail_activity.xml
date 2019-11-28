@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <act_window id="notes_action" name="Notes" res_model="mail.message" view_mode="tree" domain="[('message_type', '=', 'comment')]"/>
+    <act_window id="notes_action" name="Notes" res_model="mail.message" view_mode="tree" domain="[('message_type', '=', 'comment'), ('notified_partner_ids', '=', False)]"/>
 
     <record id="view_mail_message_notes_search" model="ir.ui.view">
         <field name="name">view.mail.messages.search</field>
