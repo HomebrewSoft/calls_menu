@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <act_window id="calls_action" name="Calls" context="{'search_default_activity_type_id': [ref('mail.mail_activity_data_call')]}" res_model="mail.activity" view_mode="list,form" />
+    <record id="view_mail_message_notes_search" model="ir.ui.view">
+        <field name="name">view.mail.messages.search</field>
+        <field name="model">mail.message</field>
+        <field name="inherit_id" ref="mail.view_message_search" />
+        <field name="arch" type="xml">
+            <search>
+                <field name="partner_id" string="Partner" filter_domain="['|', ('partner_id', 'ilike', self), ('partner_parent_id', 'ilike', self)]"/>
+                <field name="create_uid" string="Created by"/>
+            </search>
+        </field>
+    </record>
 
-    <menuitem id="calls_menu" name="Calls" action="calls_action" parent="contacts.menu_contacts"/>
+    <record id="view_partners_form_notes" model="ir.ui.view">
+        <field name="name">view.res.partner.form.notes</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field eval="1" name="priority"/>
+        <field name="arch" type="xml">
+            <data>
+                <div name="button_box" position="inside">
+                    <button class="oe_stat_button o_res_partner_tip_opp" type="action" name="%(notes_action)d" icon="fa-sticky-note" context="{'search_default_partner_id': active_id}">
+                        <field string="Notes" name="note_count" widget="statinfo"/>
+                    </button>
+                </div>
+            </data>
+        </field>
+    </record>
+
+    <record id="view_mail_message_notes_tree" model="ir.ui.view">
+        <field name="name">view.mail.messages.tree</field>
+        <field name="model">mail.message</field>
+        <field name="arch" type="xml">
+            <tree create="false" edit="false" delete="false">
+                <field name="date"/>
+                <field name="body"/>
+                <field name="partner_id"/>
+                <field name="create_uid"/>
+            </tree>
+        </field>
+    </record>
+
+    <act_window id="notes_action" name="Notes" res_model="mail.message" view_mode="tree" domain="[('message_type', '=', 'comment')]"/>
+
+    <menuitem id="notes_menu" name="Notes" action="notes_action" parent="contacts.menu_contacts"/>
 </odoo>
