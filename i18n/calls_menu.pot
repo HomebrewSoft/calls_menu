@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* calls_menu
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-29 18:07+0000\n"
+"PO-Revision-Date: 2019-11-29 18:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: calls_menu
+#: model:ir.model,name:calls_menu.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: calls_menu
+#: model_terms:ir.ui.view,arch_db:calls_menu.view_mail_message_notes_search
+msgid "Created by"
+msgstr ""
+
+#. module: calls_menu
+#: model:ir.model,name:calls_menu.model_mail_message
+msgid "Message"
+msgstr ""
+
+#. module: calls_menu
+#: model:ir.model.fields,field_description:calls_menu.field_res_partner__note_count
+#: model:ir.model.fields,field_description:calls_menu.field_res_users__note_count
+msgid "Nota"
+msgstr ""
+
+#. module: calls_menu
+#: code:addons/calls_menu/models/res_partner.py:0
+#, python-format
+msgid "Note"
+msgstr ""
+
+#. module: calls_menu
+#: model:ir.actions.act_window,name:calls_menu.notes_action
+#: model:ir.ui.menu,name:calls_menu.notes_menu
+#: model_terms:ir.ui.view,arch_db:calls_menu.view_partners_form_notes
+msgid "Notes"
+msgstr ""
+
+#. module: calls_menu
+#: model:ir.model.fields,field_description:calls_menu.field_mail_mail__partner_id
+#: model:ir.model.fields,field_description:calls_menu.field_mail_message__partner_id
+#: model_terms:ir.ui.view,arch_db:calls_menu.view_mail_message_notes_search
+msgid "Partner"
+msgstr ""
+
+#. module: calls_menu
+#: model:ir.model.fields,field_description:calls_menu.field_mail_mail__partner_parent_id
+#: model:ir.model.fields,field_description:calls_menu.field_mail_message__partner_parent_id
+msgid "Partner Parent"
+msgstr ""
