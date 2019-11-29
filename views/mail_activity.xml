@@ -34,11 +34,11 @@
         <field name="name">view.mail.messages.tree</field>
         <field name="model">mail.message</field>
         <field name="arch" type="xml">
-            <tree create="false" edit="false" delete="false">
-                <field name="date"/>
-                <field name="body"/>
-                <field name="partner_id"/>
-                <field name="create_uid"/>
+            <tree create="false" delete="false" default_order="date desc, partner_id, create_uid" editable="bottom">
+                <field readonly="1" name="date"/>
+                <field readonly="1" name="body"/>
+                <field readonly="1" name="partner_id"/>
+                <field readonly="1" name="create_uid"/>
             </tree>
         </field>
     </record>
